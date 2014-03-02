@@ -1,11 +1,11 @@
 var csv = dsv(',');
-
+// get data from csv, pass to parse function
 $.ajax({
 	url: 'data/data-posts.csv',
 	success: parseData
 });
 
-
+// split D/M/YYYY format, month is 0 indexed (whaaat?) -> correct
 function parseData(str) {
 	var data = csv.parse(str);
 	data = data.map(function(d) {
@@ -23,7 +23,23 @@ function renderChart(data) {
 			selected: 1
 		},
 		title: {
-			text: 'IFES Posts'
+			text: 'IFES Posts Over Time'
+		},
+		credits: {
+			enabled: false
+
+		},
+		xAxis: {
+			title: {
+				align: "middle",
+				text: 'Date'
+			}
+		},
+		yAxis: {
+			title: {
+				align: "middle",
+				text: "Number of Posts"
+			}
 		},
 		series: [{
 			name: 'IFES',
