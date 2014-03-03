@@ -1,3 +1,7 @@
+/*
+ * IMPORT + PARSE DATA
+ */
+
 var csv = dsv(',');
 // get data from csv, pass to parse function
 $.ajax({
@@ -16,21 +20,60 @@ function parseData(str) {
 	data.sort(function(a, b) {return a[0] - b[0]});
 	renderChart(data);
 }
-// make chart and customize
+/*
+ * DRAW CHART
+ */
 function renderChart(data) {
 	$('#container').highcharts('StockChart', {
 		colors: [ 
 			// colors taken from the palette on this site: http://www.electionguide.org/map/
-			'#E9322D','#E74C3C','#2980B9','#16A085','#24748C','#2f7ed8'
+			'#E9322D','#EC7063','#FBD8DB','#666'
 		],
 		rangeSelector: {
-			enabled: false
+		// defaults to most recent time for filter (so, 3M=3months from last date)
+			enabled: true,
+			buttons: [{
+				type: 'month',
+				count: 1,
+				text: '1M'
+			}, {
+				type: 'month',
+				count: 3,
+				text: '3M'
+			}, {
+				type: 'year',
+				count: 1,
+				text: '1Y'
+			}, {
+				type: 'all',
+				text: 'All'
+			}],
+			buttonSpacing : 2,
+			buttonTheme: {
+				stroke: 2,
+				r: 5,
+				style: {
+					color: "E9322D"
+				},
+				states: {
+					hover: {
+						fill: "#FBD8DB"
+					},
+					select: {
+						fill: '#E9322D',
+						style: {
+							color: 'white'
+						}
+					}
+				}
+			},
+			inputBoxBorderColor: "#EC7063"
 		},
 		credits: {
 			enabled: false
 		},
 		title: {
-			text: 'IFES Posts Over Time',
+			text: 'IFES Report Tracker',
 			style: {
 				"color": "#E9322D"
 			}
@@ -40,7 +83,7 @@ function renderChart(data) {
 				align: "middle",
 				text: 'Date',
 				style: {
-					"color": "#E74C3C"
+					"color": "#EC7063"
 				}
 			}
 		},
@@ -49,20 +92,26 @@ function renderChart(data) {
 				align: "middle",
 				text: "Number of Posts",
 				style: {
-					"color": "#E74C3C"
+					"color": "#EC7063"
 				}
 			}
 		},
 		legend: {
 			enabled: true
 		},
+		navigator: {
+			series: {
+				color:"#FBD8DB"
+			}
+		},
 		scrollbar: {
-			barBackgroundColor: "#E74C3C",
+			barBackgroundColor: "#EC7063",
 			barBorderRadius: 5,
-			buttonBackgroundColor: "#E74C3C"
+			buttonBackgroundColor: "#EC7063",
+			buttonBorderRadius: 5
 		},
 		series: [{
-			name: 'IFES',
+			name: 'Posts',
 			data: data
 		}]
 	});
