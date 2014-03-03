@@ -20,7 +20,7 @@ Round 2
 * **grouped bar chart** incident perps by gender / incident victims by gender
 
 ### Demo
-View the latest charts [here](http://auremoser.github.io/ifes/)!
+View the latest charts [here](http://ushahidi-auremoser.dotcloud.com/)!
 
 These are demos with fake data based on a loose understanding of a few goals: chart x/y display, likely data format, desire for interactivity and filtering, desire to export in various file formats.
 
