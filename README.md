@@ -1,6 +1,6 @@
 ifes
 ====
-Simple repo to store sample charts.
+Simple repo to store sample charts. Demo [here](http://ushahidi-auremoser.dotcloud.com/).
 
 ### Charts
 
