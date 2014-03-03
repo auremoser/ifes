@@ -25,9 +25,9 @@ function parseData(str) {
  */
 function renderChart(data) {
 	$('#container').highcharts('StockChart', {
-		colors: [ 
+		colors: [
 			// colors taken from the palette on this site: http://www.electionguide.org/map/
-			'#E9322D','#EC7063','#FBD8DB','#666'
+			'#E9322D', '#EC7063', '#FBD8DB', '#666'
 		],
 		rangeSelector: {
 		// defaults to most recent time for filter (so, 3M=3months from last date)
@@ -48,16 +48,16 @@ function renderChart(data) {
 				type: 'all',
 				text: 'All'
 			}],
-			buttonSpacing : 2,
+			buttonSpacing: 2,
 			buttonTheme: {
 				stroke: 2,
 				r: 5,
 				style: {
-					color: "E9322D"
+					color: 'E9322D'
 				},
 				states: {
 					hover: {
-						fill: "#FBD8DB"
+						fill: '#FBD8DB'
 					},
 					select: {
 						fill: '#E9322D',
@@ -67,7 +67,7 @@ function renderChart(data) {
 					}
 				}
 			},
-			inputBoxBorderColor: "#EC7063"
+			inputBoxBorderColor: '#EC7063'
 		},
 		credits: {
 			enabled: false
@@ -75,24 +75,18 @@ function renderChart(data) {
 		title: {
 			text: 'IFES Report Tracker',
 			style: {
-				"color": "#E9322D"
+				'color': '#E9322D'
 			}
 		},
 		xAxis: {
-			title: {
-				align: "middle",
-				text: 'Date',
-				style: {
-					"color": "#EC7063"
-				}
-			}
+			type: 'datetime'
 		},
 		yAxis: {
 			title: {
-				align: "middle",
-				text: "Number of Posts",
+				align: 'middle',
+				text: 'Number of Reports',
 				style: {
-					"color": "#EC7063"
+					'color': '#EC7063'
 				}
 			}
 		},
@@ -101,17 +95,17 @@ function renderChart(data) {
 		},
 		navigator: {
 			series: {
-				color:"#FBD8DB"
+				color: '#FBD8DB'
 			}
 		},
 		scrollbar: {
-			barBackgroundColor: "#EC7063",
+			barBackgroundColor: '#EC7063',
 			barBorderRadius: 5,
-			buttonBackgroundColor: "#EC7063",
+			buttonBackgroundColor: '#EC7063',
 			buttonBorderRadius: 5
 		},
 		series: [{
-			name: 'Posts',
+			name: 'Reports',
 			data: data
 		}]
 	});
