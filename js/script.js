@@ -16,30 +16,50 @@ function parseData(str) {
 	data.sort(function(a, b) {return a[0] - b[0]});
 	renderChart(data);
 }
-
+// make chart and customize
 function renderChart(data) {
 	$('#container').highcharts('StockChart', {
+		colors: [ 
+			// colors taken from the palette on this site: http://www.electionguide.org/map/
+			'#E9322D','#E74C3C','#2980B9','#16A085','#24748C','#2f7ed8'
+		],
 		rangeSelector: {
-			selected: 1
-		},
-		title: {
-			text: 'IFES Posts Over Time'
+			enabled: false
 		},
 		credits: {
 			enabled: false
-
+		},
+		title: {
+			text: 'IFES Posts Over Time',
+			style: {
+				"color": "#E9322D"
+			}
 		},
 		xAxis: {
 			title: {
 				align: "middle",
-				text: 'Date'
+				text: 'Date',
+				style: {
+					"color": "#E74C3C"
+				}
 			}
 		},
 		yAxis: {
 			title: {
 				align: "middle",
-				text: "Number of Posts"
+				text: "Number of Posts",
+				style: {
+					"color": "#E74C3C"
+				}
 			}
+		},
+		legend: {
+			enabled: true
+		},
+		scrollbar: {
+			barBackgroundColor: "#E74C3C",
+			barBorderRadius: 5,
+			buttonBackgroundColor: "#E74C3C"
 		},
 		series: [{
 			name: 'IFES',
