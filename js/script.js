@@ -40,7 +40,7 @@ function renderChart(data) {
 	$('#reports').highcharts('StockChart', {
 		colors: [
 			// colors taken from the palette on this site: http://www.electionguide.org/map/
-			'#E9322D', '#EC7063', '#FBD8DB', '#666'
+			'#E9322D', '#46A546', '#2C81BA' , '#EC7063', '#FBD8DB', '#666'
 		],
 		rangeSelector: {
 		// defaults to most recent time for filter (so, 3M=3months from last date)
@@ -118,11 +118,11 @@ function renderChart(data) {
 			buttonBorderRadius: 5
 		},
 		tooltip: {
-		    	pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b>',
+		    	pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
 		    	valueDecimals: 0
 		},
 		series: [{
-			name: 'Reports',
+			name: 'Total Reports',
 			data: posts,
 		}, {
 		 	name: 'Trusted',
