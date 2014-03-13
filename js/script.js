@@ -1,6 +1,10 @@
+'use strict'
 /*
  * IMPORT + PARSE DATA
  */
+var posts = [];
+var trust = [];
+var untrust = [];
 
 var csv = dsv(',');
 // get data from csv, pass to parse function
@@ -8,26 +12,35 @@ $.ajax({
 	url: 'data/data-posts.csv',
 	success: parseData
 });
-
+	
 // split D/M/YYYY format, month is 0 indexed (whaaat?) -> correct
 function parseData(str) {
 	var data = csv.parse(str);
-	data = data.map(function(d) {
+	data.forEach(function(d) {
 		var mdy = d.date.split('/');
 		var date = new Date(mdy[2], mdy[0] - 1, mdy[1]);
-		return [date.getTime(), +d.posts];
+		d.date = date.getTime()
+	})
+
+	data.sort(function(a, b) { return a.date - b.date });
+
+	data.forEach(function(d) {
+		posts.push([d.date, +d.posts]);
+		trust.push([d.date, +d.trust]);
+		untrust.push([d.date, +d.untrust]);
 	});
-	data.sort(function(a, b) {return a[0] - b[0]});
+	
 	renderChart(data);
-}
+};
 /*
  * DRAW CHART
  */
 function renderChart(data) {
-	$('#container').highcharts('StockChart', {
+	console.log(data);
+	$('#reports').highcharts('StockChart', {
 		colors: [
 			// colors taken from the palette on this site: http://www.electionguide.org/map/
-			'#E9322D', '#EC7063', '#FBD8DB', '#666'
+			'#E9322D', '#46A546', '#2C81BA' , '#EC7063', '#FBD8DB', '#666'
 		],
 		rangeSelector: {
 		// defaults to most recent time for filter (so, 3M=3months from last date)
@@ -104,9 +117,34 @@ function renderChart(data) {
 			buttonBackgroundColor: '#EC7063',
 			buttonBorderRadius: 5
 		},
+		tooltip: {
+		    	pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
+		    	valueDecimals: 0
+		},
 		series: [{
-			name: 'Reports',
-			data: data
+			name: 'Total Reports',
+			data: posts,
+		}, {
+		 	name: 'Trusted',
+		 	data: trust,
+		}, {
+			name: 'Untrusted',
+			data: untrust,
+		}]
+	});
+
+	$('#regions').highcharts('StockChart', {
+		chart: {
+			alignTicks: false
+		},
+		title: {
+			text: 'Incidents by Region'
+		},
+		series: [{
+			type: 'column',
+			name: 'Incidents by Region',
+			data: posts 
 		}]
 	});
 }
+

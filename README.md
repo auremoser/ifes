@@ -39,3 +39,7 @@ IFES Reference Page [here](http://www.electionguide.org/map/).
 
 
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/auremoser/ifes/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
