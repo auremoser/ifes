@@ -27,7 +27,7 @@ These are demos with fake data based on a loose understanding of a few goals: ch
 Some design captions:
 ![Map](https://raw.github.com/auremoser/images/master/ifes.png)
 
-![Report Count](https://raw.github.com/auremoser/images/master/ifes-reports.png)
+![Report Count](https://raw.github.com/auremoser/images/master/ifes-reportcount.png)
 Comments welcome, add them to the issues.
 
 
