@@ -1,23 +1,29 @@
 ifes
 ====
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/auremoser/ifes/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 Simple repo to store sample charts. Demo [here](http://auremoser.github.io/ifes/).
 
 ### Charts
 
-Here are some charts we considered making:
+Here are some charts we considered making split into two rounds. Otherwise updated references can be found [here](https://docs.google.com/document/d/1oFUhsO084gAbB8VIjfNDDXWoMrBmF3XLa6QyKHRyMC8/edit?usp=sharing).
 
 Round 1
 
 * **time series** # reports over time
-* **bar graph stacked or group** reporter counts by month/week for both trusted and untrusted reporters
+* **time series** reporter counts by month/week for both trusted and untrusted reporters
+* **pie chart** regions and subregion counts for reports/incidents
+* **pie chart** gender % by perp/victim
+* **grouped bar graph** violence types by month
+* **grouped bar** impact times (violence/vandalism)
 
 Round 2
 
-* **line chart** reported incident count by political party of perp
-* **line chart** reported incident count by political party of victim
-* **bar chart** incident count by violence type
-* **pie** report count by source (SMS/Phone/Fax...)
-* **grouped bar chart** incident perps by gender / incident victims by gender
+* **stats/counts** generated based on predefined and desired figures for reports
+* **summary form** # of reports over time with a dominance of _ party and _ types of perps/victims
+* **grouped bar graph** political parties associated with reports as perps/victims
+* **line chart** post-facto analysis: graphic comparing violence report counts to elections statistics
+* **standard chart set** for comparison across deployments by: 1.Location, 2.Report count, 3.Violence Type, 4. Impact type, 5. Gender balance involved
 
 ### Demo
 View the latest charts [here](http://auremoser.github.io/ifes/)!
@@ -27,7 +33,9 @@ These are demos with fake data based on a loose understanding of a few goals: ch
 Some design captions:
 ![Map](https://raw.github.com/auremoser/images/master/ifes.png)
 
-![Report Count](https://raw.github.com/auremoser/images/master/ifes-reportcount.png)
+![Report Count](https://raw.github.com/auremoser/images/master/ifes-reports.png)
+
+![Region Count](https://raw.github.com/auremoser/images/master/ifes-regionalpie.png)
 Comments welcome, add them to the issues.
 
 
@@ -41,5 +49,5 @@ IFES Reference Page [here](http://www.electionguide.org/map/).
 
 
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/auremoser/ifes/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 
