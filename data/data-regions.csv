@@ -1,139 +1,1 @@
-date,atoll,island
-1/10/14,Kaafu,Male
-2/10/14,Kaafu,Male
-3/10/14,Hadhdhunmathi - Laamu,Maavah
-4/10/14,Hadhdhunmathi - Laamu,Maavah
-5/10/14,Hadhdhunmathi - Laamu,Maavah
-6/10/14,Kaafu,Male
-7/10/14,Kaafu,Male
-8/10/14,South Miladhunmadulu - Noonu,Velidhoo
-9/10/14,Kaafu,Male
-10/10/14,Kaafu,Male
-11/10/14,Kaafu,Male
-12/10/14,Hadhdhunmathi - Laamu,Maavah
-1/11/14,Kaafu,Male
-2/11/14,Kaafu,Male
-3/11/14,Kaafu,Male
-4/11/14,Kaafu,Male
-5/11/14,Kaafu,Male
-6/11/14,South Huvadhu - Gaafu Dhaalu,Fares
-7/11/14,South Maalhosmadulu - Baa,Thulhaadhoo
-8/11/14,Kaafu,Male
-9/11/14,Unknown,Unknown
-10/11/14,Kaafu,Male
-11/11/14,Kaafu,Male
-12/11/14,Kaafu,Male
-1/12/14,Kaafu,Male
-2/12/14,Kaafu,Male
-3/12/14,Kaafu,Male
-4/12/14,North Maalhosmadulu - Raa,Innamaadhoo
-5/12/14,South Miladhunmadulu - Noonu,Landhoo
-6/12/14,South Huvadhu - Gaafu Dhaalu,Thinadhoo
-7/12/14,Kaafu,Male
-8/12/14,Kaafu,Male
-9/12/14,Kaafu,Male
-10/12/14,Hadhdhunmathi - Laamu,Kunahandhoo
-11/12/14,South Maalhosmadulu - Baa,Thulhaadhoo
-12/12/14,Kolhumadulu - Thaa,Veymandoo
-1/13/14,Addu - Seenu,Hulhudhoo
-2/13/14,Kaafu,Male
-3/13/14,North Huvadhu - Gaafu Alif,Gemanafushi
-4/13/14,North Thiladhunmathi - Haa Alif,Uligamu
-5/13/14,North Thiladhunmathi - Haa Alif,Muraidhoo
-6/13/14,South Thiladhunmathi - Haa Dhaalu,Hanimaadhoo
-7/13/14,Kaafu,Male
-8/13/14,Kaafu,Male
-9/13/14,North Miladhunmadulu - Shaviyani,Foakaidhoo
-10/13/14,South Thiladhunmathi - Haa Dhaalu,Kulhudhuffushi
-11/13/14,Kaafu,Male
-12/13/14,Kaafu,Male
-1/14/14,Kaafu,Male
-2/14/14,Kolhumadulu - Thaa,Thimarafushi
-3/14/14,North Thiladhunmathi - Haa Alif,Filladhoo
-4/14/14,Kaafu,Male
-5/14/14,South Thiladhunmathi - Haa Dhaalu,Kulhudhuffushi
-6/14/14,Kaafu,Male
-7/14/14,Kaafu,Male
-8/14/14,Kaafu,Male
-9/14/14,,
-10/14/14,,
-11/14/14,,
-12/14/14,,
-1/15/14,,
-2/15/14,,
-3/15/14,,
-4/15/14,,
-5/15/14,,
-6/15/14,,
-7/15/14,,
-8/15/14,,
-9/15/14,,
-10/15/14,,
-11/15/14,,
-12/15/14,,
-1/16/14,,
-2/16/14,,
-3/16/14,,
-4/16/14,,
-5/16/14,,
-6/16/14,,
-7/16/14,,
-8/16/14,,
-9/16/14,,
-10/16/14,,
-11/16/14,,
-12/16/14,,
-1/17/14,,
-2/17/14,,
-3/17/14,,
-4/17/14,,
-5/17/14,,
-6/17/14,,
-7/17/14,,
-8/17/14,,
-9/17/14,,
-10/17/14,,
-11/17/14,,
-12/17/14,,
-1/18/14,,
-2/18/14,,
-3/18/14,,
-4/18/14,,
-5/18/14,,
-6/18/14,,
-7/18/14,,
-8/18/14,,
-9/18/14,,
-10/18/14,,
-11/18/14,,
-12/18/14,,
-1/19/14,,
-2/19/14,,
-3/19/14,,
-4/19/14,,
-5/19/14,,
-6/19/14,,
-7/19/14,,
-8/19/14,,
-9/19/14,,
-10/19/14,,
-11/19/14,,
-12/19/14,,
-1/20/14,,
-2/20/14,,
-3/20/14,,
-4/20/14,,
-5/20/14,,
-6/22/14,,
-1/1/13,,
-2/1/13,,
-3/1/13,,
-4/1/13,,
-5/1/13,,
-6/1/13,,
-7/1/13,,
-8/1/13,,
-9/1/13,,
-10/1/13,,
-11/1/13,,
-12/1/13,,
+id,date,atoll,island1,1/10/14,Kaafu,Male2,2/10/14,Kaafu,Male3,3/10/14,Hadhdhunmathi - Laamu,Maavah4,4/10/14,Hadhdhunmathi - Laamu,Maavah5,5/10/14,Hadhdhunmathi - Laamu,Maavah6,6/10/14,Kaafu,Male7,7/10/14,Kaafu,Male8,8/10/14,South Miladhunmadulu - Noonu,Velidhoo9,9/10/14,Kaafu,Male10,10/10/14,Kaafu,Male11,11/10/14,Kaafu,Male12,12/10/14,Hadhdhunmathi - Laamu,Maavah13,1/11/14,Kaafu,Male14,2/11/14,Kaafu,Male15,3/11/14,Kaafu,Male16,4/11/14,Kaafu,Male17,5/11/14,Kaafu,Male18,6/11/14,South Huvadhu - Gaafu Dhaalu,Fares19,7/11/14,South Maalhosmadulu - Baa,Thulhaadhoo20,8/11/14,Kaafu,Male21,9/11/14,Unknown,Unknown22,10/11/14,Kaafu,Male23,11/11/14,Kaafu,Male24,12/11/14,Kaafu,Male25,1/12/14,Kaafu,Male26,2/12/14,Kaafu,Male27,3/12/14,Kaafu,Male28,4/12/14,North Maalhosmadulu - Raa,Innamaadhoo29,5/12/14,South Miladhunmadulu - Noonu,Landhoo30,6/12/14,South Huvadhu - Gaafu Dhaalu,Thinadhoo31,7/12/14,Kaafu,Male32,8/12/14,Kaafu,Male33,9/12/14,Kaafu,Male34,10/12/14,Hadhdhunmathi - Laamu,Kunahandhoo35,11/12/14,South Maalhosmadulu - Baa,Thulhaadhoo36,12/12/14,Kolhumadulu - Thaa,Veymandoo37,1/13/14,Addu - Seenu,Hulhudhoo38,2/13/14,Kaafu,Male39,3/13/14,North Huvadhu - Gaafu Alif,Gemanafushi40,4/13/14,North Thiladhunmathi - Haa Alif,Uligamu41,5/13/14,North Thiladhunmathi - Haa Alif,Muraidhoo42,6/13/14,South Thiladhunmathi - Haa Dhaalu,Hanimaadhoo43,7/13/14,Kaafu,Male44,8/13/14,Kaafu,Male45,9/13/14,North Miladhunmadulu - Shaviyani,Foakaidhoo46,10/13/14,South Thiladhunmathi - Haa Dhaalu,Kulhudhuffushi47,11/13/14,Kaafu,Male48,12/13/14,Kaafu,Male49,1/14/14,Kaafu,Male50,2/14/14,Kolhumadulu - Thaa,Thimarafushi51,3/14/14,North Thiladhunmathi - Haa Alif,Filladhoo52,4/14/14,Kaafu,Male53,5/14/14,South Thiladhunmathi - Haa Dhaalu,Kulhudhuffushi54,6/14/14,Kaafu,Male55,7/14/14,Kaafu,Male56,8/14/14,Kaafu,Male57,9/14/14,,58,10/14/14,,59,11/14/14,,60,12/14/14,,61,1/15/14,,62,2/15/14,,63,3/15/14,,64,4/15/14,,65,5/15/14,,66,6/15/14,,67,7/15/14,,68,8/15/14,,69,9/15/14,,70,10/15/14,,71,11/15/14,,72,12/15/14,,73,1/16/14,,74,2/16/14,,75,3/16/14,,76,4/16/14,,77,5/16/14,,78,6/16/14,,79,7/16/14,,80,8/16/14,,81,9/16/14,,82,10/16/14,,83,11/16/14,,84,12/16/14,,85,1/17/14,,86,2/17/14,,87,3/17/14,,88,4/17/14,,89,5/17/14,,90,6/17/14,,91,7/17/14,,92,8/17/14,,93,9/17/14,,94,10/17/14,,95,11/17/14,,96,12/17/14,,97,1/18/14,,98,2/18/14,,99,3/18/14,,100,4/18/14,,101,5/18/14,,102,6/18/14,,103,7/18/14,,104,8/18/14,,105,9/18/14,,106,10/18/14,,107,11/18/14,,108,12/18/14,,109,1/19/14,,110,2/19/14,,111,3/19/14,,112,4/19/14,,113,5/19/14,,114,6/19/14,,115,7/19/14,,116,8/19/14,,117,9/19/14,,118,10/19/14,,119,11/19/14,,120,12/19/14,,121,1/20/14,,122,2/20/14,,123,3/20/14,,124,4/20/14,,125,5/20/14,,126,6/22/14,,127,1/1/13,,128,2/1/13,,129,3/1/13,,130,4/1/13,,131,5/1/13,,132,6/1/13,,133,7/1/13,,134,8/1/13,,135,9/1/13,,136,10/1/13,,137,11/1/13,,138,12/1/13,,
