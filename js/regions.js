@@ -2,15 +2,15 @@
 	'use strict'
 
 	var csv = dsv(',');
-	var colors = '#1f77b4 #aec7e8 #2ca02c #98df8a #d62728 #DD514C #9467bd #c5b0d5 #e377c2 #dbdb8d #17becf #9edae5'.split(' ');
+	var colors = '#1f77b4 #aec7e8 #2ca02c #98df8a #d62728 #DD514C #9467bd #c5b0d5 #e377c2 #dbdb8d #17becf #9edae5 #f90'.split(' ');
+	var atolls = [];
+	var islands = [];
 	
 	$.ajax({
 	    url: 'data/data-regions.csv',
 	    success: parseCSV
 	});
 	
-	var atolls = [];
-	var islands = [];
 	
 	function parseCSV(raw) {
 	    var data = csv.parse(raw);
@@ -18,7 +18,6 @@
 	
 	    var c = 0;
 	    var tmpAtolls = {};
-	
 	    data.forEach(function(d) {
 	        if (!(d.atoll && d.island)) { return }
 	        var atoll = tmpAtolls[d.atoll] || { y: 0, islands: {}, name: d.atoll, color: colors[c++] };
@@ -37,8 +36,10 @@
 	
 	    atolls.forEach(function(d) {
 	        var tmp = [];
-	        for (var i in d.islands) {
-	            tmp.push(d.islands[i]);
+	        for (var islandName in d.islands) {
+	        	var island = d.islands[islandName]
+	            island.color = Highcharts.Color(island.color).brighten(0.1).get('rgb')
+	            tmp.push(island);
 	        }
 	        tmp.sort(function(a,b) { return b.y - a.y });
 	        islands = islands.concat(tmp);
@@ -101,26 +102,3 @@
 	    });
 	}
 })();
-//NOTES
-//string of array
-//
-//tmp Atolls sort split on space -> turn to 
-//c = index of a color
-//
-//tmp atolls if it doesn' t exist y - o color get from array thing at position c, get whatevers there and then ++
-//on atoll y++
-//if islands ofor the island  adopt parent object's color
-//island.y++
-//tmp atolls - where you store attolls use name and assign it back to the attolls
-//// made and object
-//objects are never ordered (ruby has ordered hashes)
-//turn it back into an array
-//
-//for (tmpgo over items in object)
-//atolls pushed onto array and then sort ray by size of y
-//for each atoll (ordered), for each island push onto islands array
-//
-/////ADD
-//for each atoll go through each islandsort temporary array on item and then sort
-//
-//render
