@@ -1,36 +1,36 @@
 (function() {
-	'use strict'
+	'use strict';
 	/*
 	 * IMPORT + PARSE DATA
 	 */
 	var posts = [];
 	var trust = [];
 	var untrust = [];
-	
+
 	var csv = dsv(',');
 	// get data from csv, pass to parse function
 	$.ajax({
 		url: 'data/data-posts.csv',
 		success: parseData
 	});
-	
+
 	// split D/M/YYYY format, month is 0 indexed (whaaat?) -> correct
 	function parseData(str) {
 		var data = csv.parse(str);
 		data.forEach(function(d) {
 			var mdy = d.date.split('/');
 			var date = new Date(mdy[2], mdy[0] - 1, mdy[1]);
-			d.date = date.getTime()
-		})
-	
+			d.date = date.getTime();
+		});
+
 		data.sort(function(a, b) { return a.date - b.date });
-	
+
 		data.forEach(function(d) {
 			posts.push([d.date, +d.posts]);
 			trust.push([d.date, +d.trust]);
 			untrust.push([d.date, +d.untrust]);
 		});
-		
+
 		renderChart(data);
 	};
 	/*
@@ -150,13 +150,13 @@
 			},
 			series: [{
 				name: 'مجموع تقارير',
-				data: posts,
+				data: posts
 			}, {
 			 	name: 'تقارير موثوق',
-			 	data: trust,
+			 	data: trust
 			}, {
 				name: 'تقارير غير موثوق بها',
-				data: untrust,
+				data: untrust
 			}]
 		});
 	}
