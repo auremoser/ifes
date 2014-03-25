@@ -39,26 +39,29 @@
 	 // experimenting with example of flipped chart for internationalization:
 	 // http://www.highcharts.com/docs/advanced-chart-features/internationalization
 	 // edit lang via setOptions config
-	Highcharts.setOptions({
-		lang: {
-			contextButtonTitle: 'الرسم البياني قائمة السياق',
-			decimalPoint: ',',
-			downloadJPEG: 'تحميل JPG',
-			downloadPDF: 'تحميل PDF',
-			downloadPNG: 'تحميل PNG',
-			downloadSVG: 'تحميل SVG',
-			months: ['يناير', 'فبراير', 'مارس', 'أبريل/إبريل', 'مايو', 'يونيو/يونية', 'يوليو/يولية', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
-			printChart: 'طباعة الرسم البياني',
-			resetZoom: 'إعادة تعيين التكبير',
-			resetZoomTitle: 'إعادة تعيين مستوى التكبير 1:1',
-			shortMonths: ['يناير', 'فبراير', 'مارس', 'أبريل/إبريل', 'مايو', 'يونيو/يونية', 'يوليو/يولية', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
-			thousandsSep: '.',
-			weekdays: ['يوم الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت', 'الأحد']
-		}
-	});
 
 	function renderChart(data) {
 		console.log(data);
+		Highcharts.setOptions({
+			lang: {
+				contextButtonTitle: 'الرسم البياني قائمة السياق',
+				decimalPoint: ',',
+				downloadJPEG: 'تحميل JPG',
+				downloadPDF: 'تحميل PDF',
+				downloadPNG: 'تحميل PNG',
+				downloadSVG: 'تحميل SVG',
+				months: ['يناير', 'فبراير', 'مارس', 'أبريل/إبريل', 'مايو', 'يونيو/يونية', 'يوليو/يولية', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
+				printChart: 'طباعة الرسم البياني',
+				rangeSelectorFrom: 'من',
+				rangeSelectorTo: 'إلى',
+				rangeSelectorZoom: 'إزوم',
+				resetZoom: 'إعادة تعيين التكبير',
+				resetZoomTitle: 'إعادة تعيين مستوى التكبير 1:1',
+				shortMonths: ['يناير', 'فبراير', 'مارس', 'أبريل/إبريل', 'مايو', 'يونيو/يونية', 'يوليو/يولية', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
+				thousandsSep: '.',
+				weekdays: ['يوم الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت', 'الأحد']
+			}
+		});
 		$('#intl').highcharts('StockChart', {
 			colors: [
 				// colors taken from the palette on this site: http://www.electionguide.org/map/
@@ -70,47 +73,41 @@
 				buttons: [{
 					type: 'month',
 					count: 1,
-					text: '1M'
+					text: '1 شهر'
 				}, {
 					type: 'month',
 					count: 3,
-					text: '3M'
+					text: '3 شهر'
 				}, {
 					type: 'year',
 					count: 1,
-					text: '1Y'
+					text: '1 سنة'
 				}, {
 					type: 'all',
-					text: 'All'
+					text: 'كل'
 				}],
 				buttonSpacing: 2,
 				buttonTheme: {
 					stroke: 2,
 					r: 5,
-					style: {
-						color: 'E9322D'
-					},
 					states: {
-						hover: {
-							fill: '#FBD8DB'
-						},
 						select: {
-							fill: '#E9322D',
+							fill: '#2C81BA',
 							style: {
 								color: 'white'
 							}
 						}
 					}
 				},
-				inputBoxBorderColor: '#EC7063'
+				inputBoxBorderColor: '#2C81BA'
 			},
 			credits: {
 				enabled: false
 			},
 			title: {
-				text: 'IFES تقرير تعقب',
+				text: 'تقرير تعقب IFES',
 				style: {
-					'color': '#E9322D'
+					'color': '#2C81BA'
 				},
 				useHTML: Highcharts.hasBidiBug
 			},
@@ -130,6 +127,7 @@
 				opposite: true
 			},
 			legend: {
+				enabled: true,
 				useHTML: Highcharts.hasBidiBug
 			},
 			navigator: {
@@ -163,3 +161,10 @@
 		});
 	}
 })();
+
+// TODO
+// Check dataTime label format for arabic: http://jsfiddle.net/NKNnM/
+// Figure out scrollbar and navigator reverse option if possible
+// Figure out dates and why ticks don't display
+// Figure out setOptions syntax error
+
