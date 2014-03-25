@@ -1,4 +1,4 @@
-//(function() {
+(function() {
 	'use strict'
 	/*
 	 * IMPORT + PARSE DATA
@@ -134,4 +134,4 @@
 			}]
 		});
 	}
-//})();
+})();

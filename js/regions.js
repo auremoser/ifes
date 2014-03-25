@@ -67,18 +67,7 @@
                   text: 'Number of incidents'
               }
           },
-          // legend: {
-          //     enabled: true,
-          //     itemStyle: {
-          //         color: '#CCC'
-          //     },
-          //     itemHoverStyle: {
-          //         color: '#FFF'
-          //     },
-          //     itemHiddenStyle: {
-          //         color: '#333'
-          //     }
-          // },
+
           plotOptions: {
               pie: {
                   shadow: false,
