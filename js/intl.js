@@ -112,8 +112,7 @@
 				useHTML: Highcharts.hasBidiBug
 			},
 			xAxis: {
-				type: 'datetime',
-				reversed: true
+				type: 'datetime'
 			},
 			yAxis: {
 				title: {
@@ -122,26 +121,19 @@
 					style: {
 						'color': '#EC7063'
 					},
-					useHTML: Highcharts.hasBidiBug
 				},
+				useHTML: Highcharts.hasBidiBug,
 				opposite: true
 			},
 			legend: {
 				enabled: true,
-				useHTML: Highcharts.hasBidiBug
+				// useHTML: Highcharts.hasBidiBug
 			},
 			navigator: {
 				enabled: true
-				// series: {
-				// 	color: '#FBD8DB'
-				// }
 			},
 			scrollbar: {
 				enabled: true
-				// barBackgroundColor: '#EC7063',
-				// barBorderRadius: 5,
-				// buttonBackgroundColor: '#EC7063',
-				// buttonBorderRadius: 5
 			},
 			tooltip: {
 			    	pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
