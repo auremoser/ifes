@@ -41,7 +41,6 @@
 	 // edit lang via setOptions config
 
 	function renderChart(data) {
-		console.log(data);
 		Highcharts.setOptions({
 			lang: {
 				contextButtonTitle: 'الرسم البياني قائمة السياق',
