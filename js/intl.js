@@ -104,7 +104,7 @@
 				enabled: false
 			},
 			title: {
-				text: 'تقرير تعقب[INTL Incident Count]',
+				text: 'تقرير تعقب INTL Incident Count',
 				style: {
 					'color': '#2C81BA'
 				},
