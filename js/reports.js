@@ -87,7 +87,7 @@
 				enabled: false
 			},
 			title: {
-				text: 'IFES Report Tracker',
+				text: 'Ushahidi Report Counts',
 				style: {
 					'color': '#E9322D'
 				}

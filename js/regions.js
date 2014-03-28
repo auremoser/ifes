@@ -60,7 +60,7 @@
             enabled: false
           },
           title: {
-              text: 'Incidents by Region (Atoll + Island)'
+              text: 'Ushahidi Incidents by Region (Atoll + Island)'
           },
           yAxis: {
               title: {

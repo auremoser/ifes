@@ -104,7 +104,7 @@
 				enabled: false
 			},
 			title: {
-				text: 'تقرير تعقب IFES',
+				text: 'تقرير تعقب[INTL Incident Count]',
 				style: {
 					'color': '#2C81BA'
 				},
@@ -156,6 +156,5 @@
 // TODO
 // Check dataTime label format for arabic: http://jsfiddle.net/NKNnM/
 // Figure out scrollbar and navigator reverse option if possible
-// Figure out dates and why ticks don't display
 // Figure out setOptions syntax error
 
