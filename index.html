@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>IFES-DataViz</title>
+		<title>Ushahidi DataViz</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+		<!-- LOCALIZATION -->
+		<script type="text/javascript" src="js/l10n/en.js"></script>
+		<script type="text/javascript" src="js/l10n/ar.js"></script>
+		<script type="text/javascript" src="js/l10n.js"></script>
+		<script type="text/javascript">
+			/*
+			 * Include lang files
+			 * Include locatization lib, l10n
+			 * Init lang from query string parameter
+			 */
+			l10n.setLocaleFromQueryString();
+			/* l10n menu init */
+			$('.l10n-btn').live('click',function() {
+				var code = $(this).data('l10n');
+				location.href = location.origin + location.pathname + "?lang="+code;
+			});
+		</script>
+		<!-- END LOCALIZATION -->
+
 		<script src="http://code.highcharts.com/stock/highstock.js"></script>
 		<script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
 		<script type="text/javascript" src="libs/dsv.min.js"></script>
@@ -33,12 +53,14 @@
 			}
 		</style>
 	<body>
-		<h2><h2>
+		<button class='l10n-btn' data-l10n='en'>EN</button>
+		<button class='l10n-btn' data-l10n='ar'>AR</button>
+
 		<div id="reports"></div>
 		<script type="text/javascript" src="js/reports.js"></script>
 		<div id="regions"></div>
 		<script type="text/javascript" src="js/regions.js"></script>
 		<div id="intl"></div>
-		<script type="text/javascript" src="js/intl.js"></script>
+		<!-- // <script type="text/javascript" src="js/intl.js"></script> -->
 	</body>
 </html>
