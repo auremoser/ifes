@@ -52,6 +52,23 @@
   }
 
   function render() {
+      Highcharts.setOptions({
+        lang: {
+            contextButtonTitle: _('Graph context menu'),
+            decimalPoint: _('.'),
+            downloadJPEG: _('Download JPG'),
+            downloadPDF: _('Download PDF'),
+            downloadPNG: _('Download PNG'),
+            downloadSVG: _('Download SVG'),
+            printChart: _('Print'),
+            rangeSelectorFrom: _('From'),
+            rangeSelectorTo: _('To'),
+            rangeSelectorZoom: ('Zoom'),
+            resetZoom: _('Reset zoom'),
+            resetZoomTitle: _('Reset zoom level 1:1'),
+            thousandsSep: _(',')
+        }
+      });
       $('#regions').highcharts({
           chart: {
               type: 'pie'
@@ -60,11 +77,11 @@
             enabled: false
           },
           title: {
-              text: 'Ushahidi Incidents by Region (Atoll + Island)'
+              text: _('Ushahidi Incidents by Region (Atoll + Island)')
           },
           yAxis: {
               title: {
-                  text: 'Number of incidents'
+                  text: _('Number of Incidents')
               }
           },
 
@@ -101,10 +118,10 @@
               symbolWidth: 10
           },
           tooltip: {
-           valueSuffix: ' incident(s)'
+           valueSuffix: _(' incident(s)')
           },
           series: [{
-              name: 'Atolls',
+              name: _('Atolls'),
               data: atolls,
               size: '60%',
               dataLabels: {
@@ -116,7 +133,7 @@
                   distance: -30
               }
           }, {
-              name: 'Islands',
+              name: _('Islands'),
               data: islands,
               size: '80%',
               innerSize: '60%',
