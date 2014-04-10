@@ -111,7 +111,8 @@
 				useHTML: Highcharts.hasBidiBug
 			},
 			xAxis: {
-				type: 'datetime'
+				type: 'datetime',
+				reversed: true
 			},
 			yAxis: {
 				title: {

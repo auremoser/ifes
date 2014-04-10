@@ -10,15 +10,15 @@
 		<script type="text/javascript" src="js/l10n/ar.js"></script>
 		<script type="text/javascript" src="js/l10n.js"></script>
 		<script type="text/javascript">
-			/**
+			/*
 			 * - First include the different language files.
 			 * - Include the localization library, l10n.
 			 * - Initialize the language from the query string paramter
 			 */
 			l10n.setLocaleFromQueryString();
 
-			/**
-			 * Initialize l10n menu. This is a joke, thou :P
+			/*
+			 * Initialize l10n menu
 			 */
 			$('.l10n-btn').live('click',function(){
 				var code = $(this).data('l10n');
@@ -65,6 +65,5 @@
 		<script type="text/javascript" src="js/reports.js"></script>
 		<div id="regions"></div>
 		<script type="text/javascript" src="js/regions.js"></script>
-		<div id="intl"></div>
 	</body>
 </html>

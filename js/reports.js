@@ -37,6 +37,26 @@
      * DRAW CHART
      */
     function renderChart(data) {
+        Highcharts.setOptions({
+            lang: {
+                contextButtonTitle: _('Graph context menu'),
+                decimalPoint: _('.'),
+                downloadJPEG: _('Download JPG'),
+                downloadPDF: _('Download PDF'),
+                downloadPNG: _('Download PNG'),
+                downloadSVG: _('Download SVG'),
+                months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                printChart: _('Print'),
+                rangeSelectorFrom: _('From'),
+                rangeSelectorTo: _('To'),
+                rangeSelectorZoom: ('Zoom'),
+                resetZoom: _('Reset zoom'),
+                resetZoomTitle: _('Reset zoom level 1:1'),
+                shortMonths: _(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']),
+                thousandsSep: _(','),
+                weekdays: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+            }
+        });
         console.log(data);
         $('#reports').highcharts('StockChart', {
             colors: [
