@@ -1,5 +1,5 @@
 (function() {
-    'use strict'
+    'use strict';
     /*
      * IMPORT + PARSE DATA
      */
@@ -20,8 +20,8 @@
         data.forEach(function(d) {
             var mdy = d.date.split('/');
             var date = new Date(mdy[2], mdy[0] - 1, mdy[1]);
-            d.date = date.getTime()
-        })
+            d.date = date.getTime();
+        });
 
         data.sort(function(a, b) { return a.date - b.date });
 
@@ -45,16 +45,16 @@
                 downloadPDF: _('Download PDF'),
                 downloadPNG: _('Download PNG'),
                 downloadSVG: _('Download SVG'),
-                months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                months: [_('January'), _('February'), _('March'), _('April'), _('May'), _('June'), _('July'), _('August'), _('September'), _('October'), _('November'), _('December')],
                 printChart: _('Print'),
                 rangeSelectorFrom: _('From'),
                 rangeSelectorTo: _('To'),
-                rangeSelectorZoom: ('Zoom'),
+                rangeSelectorZoom: _('Zoom'),
                 resetZoom: _('Reset zoom'),
                 resetZoomTitle: _('Reset zoom level 1:1'),
-                shortMonths: _(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']),
+                shortMonths: [_('Jan'), _('Feb'), _('Mar'), _('Apr'), _('May'), _('Jun'), _('Jul'), _('Aug'), _('Sep'), _('Oct'), _('Nov'), _('Dec')],
                 thousandsSep: _(','),
-                weekdays: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+                weekdays: [_('Sunday'), _('Monday'), _('Tuesday'), _('Wednesday'), _('Thursday'), _('Friday'), _('Saturday')]
             }
         });
         console.log(data);
@@ -114,6 +114,7 @@
             },
             xAxis: {
                 type: 'datetime'
+                //reversed: _('axisOpposite')
             },
             yAxis: {
                 title: {
@@ -122,7 +123,8 @@
                     style: {
                         'color': '#EC7063'
                     }
-                }
+                },
+                opposite: _('axisOpposite')
             },
             legend: {
                 enabled: true
@@ -144,13 +146,13 @@
             },
             series: [{
                 name: _('Total Reports'),
-                data: posts,
+                data: posts
             }, {
                 name: _('Trusted'),
-                data: trust,
+                data: trust
             }, {
                 name: _('Untrusted'),
-                data: untrust,
+                data: untrust
             }]
         });
     }

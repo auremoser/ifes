@@ -1,5 +1,5 @@
 (function() {
-  'use strict'
+  'use strict';
 
   var csv = dsv(',');
   var colors = '#1f77b4 #aec7e8 #2ca02c #98df8a #d62728 #DD514C #9467bd #c5b0d5 #e377c2 #dbdb8d #17becf #9edae5 #f90'.split(' ');
@@ -33,16 +33,16 @@
       for (var tmp in tmpAtolls) {
           atolls.push(tmpAtolls[tmp]);
       }
-      atolls.sort(function(a,b) { return b.y - a.y });
+      atolls.sort(function(a, b) { return b.y - a.y });
 
       atolls.forEach(function(d) {
           var tmp = [];
           for (var islandName in d.islands) {
-            var island = d.islands[islandName]
-              island.color = Highcharts.Color(island.color).brighten(0.1).get('rgb')
+            var island = d.islands[islandName];
+              island.color = Highcharts.Color(island.color).brighten(0.1).get('rgb');
               tmp.push(island);
           }
-          tmp.sort(function(a,b) { return b.y - a.y });
+          tmp.sort(function(a, b) { return b.y - a.y });
           islands = islands.concat(tmp);
       });
 
@@ -63,7 +63,7 @@
             printChart: _('Print'),
             rangeSelectorFrom: _('From'),
             rangeSelectorTo: _('To'),
-            rangeSelectorZoom: ('Zoom'),
+            rangeSelectorZoom: _('Zoom'),
             resetZoom: _('Reset zoom'),
             resetZoomTitle: _('Reset zoom level 1:1'),
             thousandsSep: _(',')
@@ -88,15 +88,20 @@
           plotOptions: {
               pie: {
                   shadow: false,
-                  center: ['50%', '50%']
-              }, 
+                  center: ['50%', '50%'],
+                  dataLabels: {
+                    //push the default slice tooltip-callouts to the libraries
+                    //removed ('false') in ar.js
+                    enabled: _('callout')
+                  }
+              },
               series: {
                 point: {
                   events: {
                     legendItemClick: function() {
                       var id = this.id,
                       data = this.series.chart.series[0].data;
-                      $.each(data, function (i, point) {
+                      $.each(data, function(i, point) {
                         if (point.atolls == id) {
                           if (point.visible)
                               point.setVisisble(false);
@@ -114,7 +119,7 @@
               floating: true,
               align: 'right',
               verticalAlign: 'top',
-              symbolPadding: 20, 
+              symbolPadding: 20,
               symbolWidth: 10
           },
           tooltip: {
@@ -147,3 +152,7 @@
       });
   }
 })();
+
+//TODO
+// disable data labels by default in pie chart for ar.js
+// incorporate useHTML: Bidi text

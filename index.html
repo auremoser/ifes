@@ -22,7 +22,7 @@
 			 */
 			$('.l10n-btn').live('click',function(){
 				var code = $(this).data('l10n');
-				location.href = location.origin + "?lang="+code;
+				location = location.origin + location.pathname + "?lang="+code;
 			});
 		</script>
 		<!-- LOCALIZATION -->
