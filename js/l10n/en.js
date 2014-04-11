@@ -62,4 +62,5 @@ l10n.en = {
     ',': ',',
     //FLIPPED AXES (RIGHT TO LEFT)
     'axisOpposite': false,
+    'callout': true,
 };
