@@ -63,7 +63,7 @@
             printChart: _('Print'),
             rangeSelectorFrom: _('From'),
             rangeSelectorTo: _('To'),
-            rangeSelectorZoom: ('Zoom'),
+            rangeSelectorZoom: _('Zoom'),
             resetZoom: _('Reset zoom'),
             resetZoomTitle: _('Reset zoom level 1:1'),
             thousandsSep: _(',')

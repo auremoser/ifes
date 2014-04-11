@@ -7,13 +7,14 @@ l10n.defaultCode = 'ar';
 // file, it is returned without translation.
 
 window._ = l10n.localize  = function(string) {
-    if(!this.locale || !this.locale[string]) return string;
+    if(!this.locale || typeof !this.locale[string] === 'undefined') return string;
     return this.locale[string];
 };
 // Set the active locale code, here we use 'ar', or 'en'
 // arabic and english for test.
 l10n.setLocale = function(code) {
     if(!this[code]) return;
+    this.code = [code]; // add in to flip axis
     this.locale = this[code];
 };
 // On initial load, we look for a query string parameter with key "lang"
