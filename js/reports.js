@@ -1,5 +1,5 @@
 (function() {
-    'use strict'
+    'use strict';
     /*
      * IMPORT + PARSE DATA
      */
@@ -20,8 +20,8 @@
         data.forEach(function(d) {
             var mdy = d.date.split('/');
             var date = new Date(mdy[2], mdy[0] - 1, mdy[1]);
-            d.date = date.getTime()
-        })
+            d.date = date.getTime();
+        });
 
         data.sort(function(a, b) { return a.date - b.date });
 
@@ -146,13 +146,13 @@
             },
             series: [{
                 name: _('Total Reports'),
-                data: posts,
+                data: posts
             }, {
                 name: _('Trusted'),
-                data: trust,
+                data: trust
             }, {
                 name: _('Untrusted'),
-                data: untrust,
+                data: untrust
             }]
         });
     }

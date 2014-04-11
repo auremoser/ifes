@@ -1,4 +1,4 @@
-if(!window['l10n']) window.l10n = {};
+if (!window['l10n']) window.l10n = {};
 
 l10n.defaultCode = 'ar';
 
@@ -6,14 +6,14 @@ l10n.defaultCode = 'ar';
 // language is set. If source string is not found in the locale
 // file, it is returned without translation.
 
-window._ = l10n.localize  = function(string) {
-    if(!this.locale || typeof !this.locale[string] === 'undefined') return string;
+window._ = l10n.localize = function(string) {
+    if (!this.locale || typeof !this.locale[string] === 'undefined') return string;
     return this.locale[string];
 };
 // Set the active locale code, here we use 'ar', or 'en'
 // arabic and english for test.
 l10n.setLocale = function(code) {
-    if(!this[code]) return;
+    if (!this[code]) return;
     this.code = [code]; // add in to flip axis
     this.locale = this[code];
 };
@@ -24,10 +24,10 @@ l10n.setLocaleFromQueryString = function() {
 };
 // Helper method
 l10n.getParameterByName = function(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)'),
         results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 // Expose a global shortcut to the localize function aliased to "_",
 // so calling _("All") is the same as l10n.localize("All")

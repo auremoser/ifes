@@ -120,13 +120,13 @@
 					text: 'عدد من تقارير',
 					style: {
 						'color': '#EC7063'
-					},
+					}
 				},
 				useHTML: Highcharts.hasBidiBug,
 				opposite: true
 			},
 			legend: {
-				enabled: true,
+				enabled: true
 				// useHTML: Highcharts.hasBidiBug
 			},
 			navigator: {
