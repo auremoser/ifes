@@ -62,6 +62,7 @@ l10n.ar = {
     ',': '.',
     //FLIPPED AXES (RIGHT TO LEFT)
     'axisOpposite': true,
+    'callout': false, //tooltips by default, removed in ar.js
 
 };
 // To translate a string, you need to add the translation value here

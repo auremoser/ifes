@@ -88,7 +88,12 @@
           plotOptions: {
               pie: {
                   shadow: false,
-                  center: ['50%', '50%']
+                  center: ['50%', '50%'],
+                  dataLabels: {
+                    //push the default slice tooltip-callouts to the libraries
+                    //removed ('false') in ar.js
+                    enabled: _('callout')
+                  }
               }, 
               series: {
                 point: {
@@ -147,3 +152,7 @@
       });
   }
 })();
+
+//TODO
+// disable data labels by default in pie chart for ar.js
+// incorporate useHTML: Bidi text 
