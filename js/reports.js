@@ -113,8 +113,8 @@
                 }
             },
             xAxis: {
-                type: 'datetime'
-                //reversed: _('axisOpposite')
+                type: 'datetime',
+                reversed: _('axisOpposite')
             },
             yAxis: {
                 title: {
@@ -142,7 +142,8 @@
             },
             tooltip: {
                     pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
-                    valueDecimals: 0
+                    valueDecimals: 0,
+                    useHTML: true
             },
             series: [{
                 name: _('Total Reports'),

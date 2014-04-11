@@ -154,5 +154,4 @@
 })();
 
 //TODO
-// disable data labels by default in pie chart for ar.js
 // incorporate useHTML: Bidi text
