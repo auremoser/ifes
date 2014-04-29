@@ -62,5 +62,5 @@ l10n.en = {
     ',': ',',
     //FLIPPED AXES (RIGHT TO LEFT)
     'axisOpposite': false,
-    'callout': true,
+    'callout': true, //tooltips by default, removed in ar.js
 };
